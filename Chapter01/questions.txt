@@ -1,0 +1,13 @@
+What is Emmet in vs code?
+It allows you to type shortcuts that are then expanded into full pieces of code. By using Emmet, developers type less, they save both on keystrokes and time.
+
+What is CDN?
+CDN is content delivery network. A CDN is a network of servers that distributes content from an “origin” server throughout the world by caching content close to where each end user is accessing the internet via a web-enabled device. The content they request is first stored on the origin server and is then replicated and stored elsewhere as needed.
+
+What is crossorigin and why do we have to add it with the react CDN link?
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources
+This enables a better error handling experience in React 16 and later
+
+What is async and defer in js?
+When async attribute is used in script tag the HTML parsing and fetching of js code from src is done parallely and once the js is fetched the execution of js is done and the HTML parsing is paused. Once the execution is completed the parsing resumes.
+When defer is used the HTML parsing and fetching of js code from src is done parallely and once the HTML parsing is complete the js starts execution.
