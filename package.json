@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "This repo is to document all the assigments from Namaste React course by Akshay Saini",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel Chapter02/index.html",
-    "build": "parcel build Chapter02/index.html"
+    "test": "jest",
+    "start": "parcel Chapter03/index.html",
+    "build": "parcel build Chapter03/index.html"
   },
   "repository": {
     "type": "git",

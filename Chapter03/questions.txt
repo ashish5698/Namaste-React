@@ -1,0 +1,75 @@
+- What is NPM?
+NPM is a node package manager used to install packages and manage them. Although npm doesn't actually stand for 
+node package manager. Our react app is powered by a lot of things like we have to bundle the app, minify the app
+etc so the required packages for this is provided by NPM
+
+- What is `Parcel/Webpack`? Why do we need it?
+Parcel is a bundler. Bundling is the process of following imported files and merging them into a single 
+file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
+
+- What is `.parcel-cache`?
+stores information about your project when parcel builds it, so that when it rebuilds, it doesn't have to re-parse 
+and re-analyze everything from scratch. It's a key reason why parcel can be so fast in development mode.
+
+- What is `npx`?
+npx is used to execute using npm.
+
+- What is difference between `dependencies` vs `devDependencies?
+dependencies are the set of packages used in both the environmnets that is dev and prod whereas devDependencies 
+are the set of dependencies used only in dev environmnet.
+
+- What is Tree Shaking?
+Tree-shaking is removing the unwanted code. It is one of the features of parcel. In production builds, parcel
+statically analyzes the imports and exports of each module, and removes everything that is not used. This is called
+tree-shaking or dead code elimination.
+
+- What is Hot Module Replacement(HMR)?
+When we make changes in our code, parcel automatically rebuilds the changed files and updates our app in the browser.
+By default parcel fully reloads the page but in some cases it may perform Hot Module Replacement. HMR improves the development
+experience by updating the modules in the browser at runtime without needing a whole page refresh. This means application state
+can be retained as we change small things in our code. CSS changes are applied via HMR with no page reload necessary.
+
+- List down 5 features of Parcel and describe any 3.
+1) HMR
+2) Caching
+3) Code Splitting-  Parcel supports zero configuration code splitting. It allows us to split our code into separate bundles
+   which can be loaded on demand, resulting in smaller intial bundle size and faster load time. Code splitting
+   is controlled by dynamic import syntax which works like normal import syntax but returns a promise.
+4) Image Optimization-   Parcel supports resizing, converting, and optimizing images. We can use query parameter when referencing
+   an image in HTML, CSS and Javascript to specify which format and size the image should be converted to.
+   Resizing and converting occurs in both development and production mode.
+   Parcel provides image optimization for JPEGs and PNGs by default in production mode, which reduces the 
+   size of the images without affecting the quality. If we want to disable it we need to add some code in 
+    .parcelrc config file.
+        {
+            "extends": "@parcel/config-default",
+            "optimizers": {
+            "*.{jpg,jpeg,png}": []
+            }
+        }    
+5) Minification-    Parcel includes minfiers for javascript, CSS and HTML. Minification reduces the file size of the output bundles
+   by removing white-spaces, renaming variables to shorter names and many other optimizations.
+
+- What is .gitignore? What should we add and not add into it?
+The .gitignore file tells Git which files to ignore when committing our project to the Git Repo.
+Everything which can be regenrated on server again should be in .gitignore. For ex- .parcel-cache and dist folder.
+
+- What is the difference between package.json and package.lock.json?
+package.json conatins the basic information of the project like name, description, scripts and dependencies.
+package.lock.json contains the name, dependencies and locked version of the project.
+
+- Why should I not modify package.lock.json?
+It is auto-generated file and we should not modify it because its purpose is to track the entire tree of 
+dependencies and the exact version of each dependency. we should add this file into our git repo.
+
+- What is node modules? Is it good idea to push node modules into GIT?
+Node modules is a folder created by npm and a way of tracking each package which we install locally via package.json
+We should not push node modules into GIT because it is very heavy object. And with the help of package.json and package.lock.json
+we can easily generate node modules.
+
+- What is Dist Folder?
+Dist folder contains the minnified version of source code. The code inside the dist folder is used on production.
+
+- What is Browserlist?
+Browserlist is a tool in which we specify which browser should be supported by our frontend application with the help
+of some queries in a config file.
