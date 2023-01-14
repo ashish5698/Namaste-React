@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import userLogo from './user-logo.jpeg';
-import reactLogo from './namaste-react-logo.png';
+import userLogo from "./user-logo.jpeg";
+import reactLogo from "./namaste-react-logo.png";
 
 /*
 Using React.createElement
@@ -108,12 +108,12 @@ const HeaderComponent = () => {
   return (
     <div className="container">
       <a href="/">
-      <img
-        src={reactLogo}
-        alt="logo"
-        className="logo"
-        style={{ height: "50px", width: "50px" }}
-      ></img>
+        <img
+          src={reactLogo}
+          alt="logo"
+          className="logo"
+          style={{ height: "50px", width: "50px" }}
+        ></img>
       </a>
       <div className="search-bar">
         <input
@@ -122,7 +122,9 @@ const HeaderComponent = () => {
           name="search"
           className="search-box"
         ></input>
-        <button className="submit-button" type="submit">Search</button>
+        <button className="submit-button" type="submit">
+          Search
+        </button>
       </div>
       <img
         src={userLogo}
