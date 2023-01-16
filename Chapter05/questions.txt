@@ -1,0 +1,54 @@
+-- Is JSX mandatory for React?
+No, JSX is not mandatory for React. It just makes it easy to write code in React apps. We can do it without using 
+JSX as well by using React.createElement
+
+-- Is ES6 mandatory for React?
+It is not manadatory but its highly recommendable.
+
+-- {TitleComponent()} vs <TitleComponent/> vs <TitleComponent><TitleComponent/>?
+When a functional component is used as <TitleComponent/> it will have a lifecycle and can have a state.
+When a function is called directly as TitleComponent(), it will just run and return something.
+To be a component function returning JSX should be used as <TitleComponent/> and not as TitleComponent()
+
+-- How can i write comments in JSX?
+// or /**/
+
+-- What is <React.Fragment></React.Fragment> and <></>?
+It is a component imported by React which will be hidden in the DOM. React.Fragment is like an empty tag so 
+can be written like <></>.
+
+-- What is Virtual DOM?
+A representation of DOM is known as Virtual DOM. We need virtual DOM because of reconciliation.
+
+-- What is reconciliation?
+Reconciliation is an algorithm to diff one tree from the other and it determines what needs to be updated.
+React uses diff or diffing algorithm and the process is known as Reconciliation.
+
+-- What is React Fiber?
+In React 16, diff algorithm was changed and React Fiber was introduced. Its a new reconciliation engine which is 
+responsible for diff.
+
+-- Why we need keys in React? When do we need it?
+Whenever we are building same child, React will re-render everything. But if we use keys, it
+will only render the new one. For ex- Suppose we have 4 div and 1 more div is introduced, 
+if we dont have keys, React will not know what order those divs have? So, it will re-render 
+everything.
+If we have different nodes like div,img,body etc. at that point of time we don't need to provide 
+key because it will automatically identify by unique tag.
+
+-- Can we use index as key in React?
+Yes, we can use it but its not a recommended practice to do so because it can cause issues if 
+the order of items is changed.
+
+-- What are props in React?
+Whatever we pass in as an attribute in component is known as props. Props is a shorthand for properties.
+You pass in arguments and receive as parameters. 
+For Ex- 
+{RestaurantCard(restaurantList[0])} or {RestaurantCard restaurant={restaurantList[0]}}
+Both are doing the same thing.
+
+-- What is Config Driven UI?
+When we build a Real world app we control our frontend using a config driven by backend(API)
+For ex- Lets consider our food ordering app, in which lets assume there are 
+three different cities Pune, Mumbai, Delhi. Now lets say we have some offers going on which are different cities
+and we have to show the data in our frontend based on their locations. So, these things will be configured from backend.
